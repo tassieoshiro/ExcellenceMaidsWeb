@@ -1,0 +1,262 @@
+$header1: 8rem;
+$header2: 4rem;
+$header3: 3rem;
+$header4: 2rem;
+$text: 2rem;
+$button-color: #4bc0fa;
+$gradient: -webkit-linear-gradient(left, #13a6f0, #155d81);
+$linear: -webkit-linear-gradient(left, #04141d, #0c5c19);
+
+@font-face {
+  font-family: "Slabo";
+  src: url(/fonts/Slabo27px-Regular.ttf);
+}
+@font-face {
+  font-family: "Comforta";
+  src: url(/fonts/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "DancingScript";
+  src: url(/fonts/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "GreatVibes";
+  src: url(/fonts/GreatVibes-Regular.ttf);
+}
+@font-face {
+  font-family: "IndieFlower";
+  src: url(/fonts/IndieFlower-Regular.ttf);
+}
+
+.cleaning-light {
+  background: rgba($color: #000000, $alpha: 0.1);
+  display: inline-block;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+}
+
+// .cleaning {
+//   background: $gradient;
+//   display: inline-block;
+//   font-size: 2.5rem;
+//   text-transform: uppercase;
+//   padding: 0.4rem 1rem;
+//   border-radius: 15px;
+// }
+
+.py-1 {
+  padding: 1rem;
+}
+.py {
+  padding: 2rem 0;
+}
+.text-center {
+  text-align: center;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 10rem;
+  background: #13a6f0;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+.bottom-line2 {
+  height: 3px;
+  width: 20rem;
+  background: #13a6f0;
+  display: block;
+  margin: 1rem auto 4rem auto;
+}
+.bottom-line3 {
+  height: 2px;
+  width: 100%;
+  background: #c8cbcc;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+// you got to ' @include flex (); '
+
+@import "./global";
+@import "./nav";
+@import "./showcase";
+@import "./services";
+@import "./footer";
+@import "./contact";
+
+@media screen and (max-width: 842px) {
+  // CALL LINE
+  #line {
+    height: 3.9vh;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  // BURGET TAB
+  .nav-links {
+    background: linear-gradient(rgba(52, 137, 235, 0.8), transparent);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    transition: transform 1s ease;
+    a {
+      color: white;
+      font-size: $header2;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    span {
+      padding: 0.2rem 2rem;
+      background: #131218;
+      margin: 0.5rem 0rem;
+      display: block;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .nav-open {
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
+  .showcase-content {
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  // Services Home figure it OUT
+
+  .head {
+    font-size: 5.5rem;
+  }
+  .services-container {
+    grid-template-columns: 1fr;
+
+    img {
+      width: 90%;
+      border-radius: 20%;
+    }
+
+    p {
+      padding-bottom: 1.5rem;
+      text-align: center;
+      margin: auto;
+    }
+    // .cleaning {
+    //   margin: 2rem 0rem;
+    //   color: white;
+    // }
+  }
+  // Specialize Section
+  #home-a {
+    .specials {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Inner Page Services
+  .services-flex {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  // How Much Sectio
+  #howmuch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(/img/maybehowmuch.jpg) no-repeat center center/cover;
+    margin-top: 1.5rem;
+  }
+
+  // .howmuch-text {
+  //   background: url(/img/howmuch.jpg) no-repeat center center/cover;
+  // }
+
+  .howmuch-image {
+    display: none;
+  }
+
+  // Contact Section Phone
+  #contact {
+    color: #fff;
+    background: #333;
+    position: relative;
+    &:before {
+      content: "";
+      background: url(/img/contact-img.png) no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+    }
+    #contact {
+      background: url(/img/contact-img.png) no-repeat center center/cover;
+    }
+
+    .contact-form {
+      background: none;
+      z-index: 1;
+      margin-bottom: 2rem;
+    }
+    .contact-img {
+      display: none;
+    }
+  }
+
+  // Footer
+  footer > *:first-child {
+    display: none;
+  }
+}

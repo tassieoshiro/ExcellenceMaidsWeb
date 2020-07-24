@@ -1,0 +1,32 @@
+#contact {
+  display: flex;
+  flex-wrap: wrap;
+  h1 {
+    padding-top: 8rem;
+  }
+
+  .contact-form {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(229, 233, 236, 0.8), transparent);
+    .form-group {
+      margin: 0.75rem;
+      padding: 1rem;
+    }
+    label {
+      display: block;
+    }
+    input {
+      width: 80%;
+      padding: 0.5rem;
+    }
+    textarea {
+      width: 80%;
+      padding: 0.5rem;
+    }
+  }
+  .contact-img {
+    flex: 1;
+  }
+}

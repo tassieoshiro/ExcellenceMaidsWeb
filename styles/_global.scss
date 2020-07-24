@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  animation: opening 1s ease-in-out;
+  background-color: #f3f3f3;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+  font-size: $text;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+h3 {
+  font-size: $header3;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  background: $button-color;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  &:hover {
+    background: #13a6f0;
+  }
+}
+
+.btn-dark {
+  padding: 1rem 3rem;
+  background: #033557;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  &:hover {
+    background: #072e42;
+  }
+}
+
+.btn-light {
+  padding: 1rem 3rem;
+  border: 3px solid black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  line-height: 1.2;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+}
+
+// ABOUT PAGE
+.about {
+  min-height: 90vh;
+  // width: 95%;
+  // margin: 0 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  .about-introduction {
+    flex: 2 1 40rem;
+    // text-align: center;
+    p {
+      padding: 1rem 4rem;
+      line-height: 2.5rem;
+      text-align: center;
+    }
+  }
+  .about-images {
+    flex: 1 1 40rem;
+    background: linear-gradient(#b6c8f0, #dad1d4);
+    position: relative;
+    z-index: 1;
+    .about-person {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

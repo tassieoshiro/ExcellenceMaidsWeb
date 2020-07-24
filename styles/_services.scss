@@ -1,0 +1,52 @@
+.home-services {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  // h1 {
+  //   background: $gradient;
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   color: rgba(0, 0, 0, 0.2);
+  //   display: inline-block;
+  // }
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  p {
+    padding-bottom: 1.5rem;
+  }
+  .cleaning {
+    margin: 2rem 0rem;
+    color: white;
+  }
+  .card {
+    background: #e9e8e8;
+    border-radius: 2rem;
+  }
+}
+
+// How Much
+#howmuch {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem;
+
+  .howmuch-text {
+    flex: 1 1 40rem;
+    text-align: center;
+    // background: linear-gradient(rgba(146, 149, 151, 0.8), transparent);
+    color: black;
+    padding: 0.5rem;
+    h3 {
+      padding-bottom: 1.5rem;
+    }
+  }
+  .howmuch-image {
+    flex: 2 1 40rem;
+  }
+}

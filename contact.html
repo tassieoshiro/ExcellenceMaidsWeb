@@ -47,7 +47,13 @@
       <div class="contact-form">
         <h1>Contact Us</h1>
         <p>Use the form below to contact us</p>
-        <form action="" name="contact" method="POST" data-netlify="true">
+        <form
+          action=""
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+        >
           <div class="form-group">
             <label for="name" name="name">Name:</label>
             <input type="text" name="name" id="name" placeholder="Enter Name" />
@@ -77,6 +83,9 @@
               id="message"
               placeholder="Tell us about your request!"
             ></textarea>
+            <div class="my-2">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
           </div>
           <input type="submit" value="Send" class="btn" />
         </form>
